@@ -19,7 +19,7 @@ spec:
       - name: my-container
         image: abu2thahir3/banks:latest
         ports:
-        - containerPort: 8080  # This should match the targetPort in the Service
+        - containerPort: 8081  # This should match the targetPort in the Service
 ---
 apiVersion: v1
 kind: Service
@@ -33,6 +33,6 @@ spec:
   type: NodePort
   ports:
   - nodePort: 31010
-    port: 8080
-    targetPort: 8080  # This should match the containerPort in the Deployment
+    port: 8081
+    targetPort: 8081  # This should match the containerPort in the Deployment
 
